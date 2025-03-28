@@ -22,9 +22,13 @@ void main() {
   requiredArguments(lastName: "Pandey", firstName: "Arun");
 
   // optional arguments ma square brackets use garni ani ? use garni
-  void optionalArguments({String? firstName, String? lastName}) {
-    print("Optional Arguments: $firstName $lastName");
+  void optionalArguments({
+    required String firstName,
+    required String middleName,
+    String? lastName,
+  }) {
+    print("Optional Arguments: $firstName $middleName $lastName");
   }
 
-  optionalArguments(firstName: "Arun");
+  optionalArguments(firstName: "Arun", middleName: "Kumar");
 }
