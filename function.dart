@@ -26,5 +26,5 @@ void main() {
     print("Optional Arguments: $firstName $lastName");
   }
 
-  optionalArguments(lastName: "Pandey", firstName: "Arun");
+  optionalArguments(firstName: "Arun");
 }
