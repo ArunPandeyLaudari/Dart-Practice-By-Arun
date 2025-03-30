@@ -1,3 +1,21 @@
+extension SetExtensions<E> on Set<E> {
+  Set<E> symmetricDifference(Set<E> other) {
+    return (this.union(other)).difference(this.intersection(other));
+  }
+
+  bool isSubsetOf(Set<E> other) {
+    return this.every((element) => other.contains(element));
+  }
+
+  bool isSupersetOf(Set<E> other) {
+    return other.every((element) => this.contains(element));
+  }
+
+  bool isDisjoint(Set<E> other) {
+    return this.intersection(other).isEmpty;
+  }
+}
+
 void main() {
   Set<int> set1 = {1, 2, 3, 4, 5};
   Set<int> set2 = {4, 5, 6, 7, 8};
